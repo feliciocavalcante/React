@@ -1,3 +1,4 @@
+import { EnvelopeSimple, Lock, Password } from "phosphor-react";
 import ImageLogin from "./assets/college-entrance-exam-animate.svg";
 
 
@@ -21,17 +22,23 @@ function App() {
         <h1 className="text-3xl font-bold mb-4">Welcome Back</h1>
         <p className="text-gray-500"> Enter your details to sign in to your account</p>
 
-        <form className="w-full flex flex-col items-center justify-center ">
-          <div className="flex flex-col text-left w-3/5">  
+        <form className="w-full flex flex-col items-center justify-center gap-4 mt-8">
+          <div className="flex flex-col text-left w-3/5">
             <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="email"  className="rounded-md border-gray-100
-             border px-4 py-1" placeholder="name@example.com"/>
+            <div className="rounded-md border-gray-100
+             border-2 px-4 py-1 items-center flex gap-2 focus-within:border-blue-500">
+              <EnvelopeSimple size={20} className="text-gray-400" />
+              <input type="email" name="email" id="email" className="outline-none w-full " placeholder="name@example.com" /></div>
           </div>
-          <div className="flex flex-col text-left w-3/5 mt-4">  
-            <label htmlFor="password">Senha</label>
-            <input type="password" name="Senha" id="password" className="rounded-md border-gray-100
-             border px-4 py-1" placeholder="*******"/>
+          <div className="flex flex-col text-left w-3/5">
+            <label htmlFor="password">Password</label>
+            <div className="rounded-md border-gray-100
+             border-2 px-4 py-1 items-center flex gap-2 focus-within:border-blue-500">
+              <Lock size={20}  className="text-gray-400" />
+              <input type="password" name="password" id="password" className="outline-none w-full " placeholder="********" /></div>
           </div>
+
+          <button type="submit" className="bg-blue-500 text-white w-3/5 py-2 rounded-md cursor-pointer hover:bg-blue-600 transition-all">Sign In</button>
         </form>
       </div>
     </div>
